@@ -1,5 +1,6 @@
 package mor.eralp.tictactoe;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,18 +11,27 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9;
-
     private String startGame = "X";
-
     int mor1 = 5, mor2 = 5, mor3 = 5, mor4 = 5, mor5 = 5, mor6 = 5, mor7 = 5, mor8 = 5, mor9 = 5, xCount = 0, oCount, i = 0;
-
     private TextView scoreX, scoreO;
-
     private Button clearButton;
+    private AdView banner;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +39,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         buttonAdapter();
         scoreClearAdapter();
+        mobileAds();
 
 
 
+    }
+    private void mobileAds(){
+        MobileAds.initialize(MainActivity.this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
+
+            }
+        });
+
+        banner = findViewById(R.id.adViewMulti);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        banner.loadAd(adRequest);
     }
 
     @Override
@@ -52,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
         button9 = findViewById(R.id.buttonImage9);
 
     }
+
+
     private void scoreClearAdapter(){
         scoreX = findViewById(R.id.scoreX);
         scoreO = findViewById(R.id.scoreY);
@@ -78,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
                 scoreX.setText("Score X : - " + (xCount));
                 scoreO.setText("Score Y : - " + (oCount));
+
+
             }
         });
 
