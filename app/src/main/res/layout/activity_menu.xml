@@ -65,5 +65,22 @@
 
     </com.google.android.gms.ads.AdView>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMİNG SOON"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:rotation="-60"
+        android:textSize="26sp"
+        app:layout_constraintTop_toTopOf="@id/solo_play_button"
+        app:layout_constraintBottom_toBottomOf="@id/solo_play_button"
+        app:layout_constraintLeft_toLeftOf="@id/solo_play_button"
+        app:layout_constraintRight_toRightOf="@id/solo_play_button"
+        android:textStyle="bold"
+
+         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
