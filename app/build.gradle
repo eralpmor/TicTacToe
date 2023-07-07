@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace 'mor.eralp.tictactoe'
+    namespace 'app.ralpdevs.tictactoe'
     compileSdk 33
 
     defaultConfig {
-        applicationId "mor.eralp.tictactoe"
-        minSdk 25
+        applicationId "app.ralpdevs.tictactoe"
+        minSdk 21
         targetSdk 33
         versionCode 1
         versionName "1.0"

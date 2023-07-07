@@ -8,17 +8,19 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/tictactoelogo"
+        android:icon="@drawable/tictactoeapplogo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToe"
         tools:targetApi="31">
         <activity
-            android:name=".MenuActivity"
-            android:exported="false" />
+            android:name="app.ralpdevs.tictactoe.MenuActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".SplashActivity"
-            android:exported="true">
+            android:name="app.ralpdevs.tictactoe.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,8 +28,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:name="app.ralpdevs.tictactoe.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"></activity>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-4737440729912440~6351349728"/>

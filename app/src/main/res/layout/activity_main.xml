@@ -5,40 +5,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".MainActivity">
+    tools:context="app.ralpdevs.tictactoe.MainActivity">
+
+
 
     <LinearLayout
         android:id="@+id/score_linear"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingRight="40dp"
         android:paddingLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
         android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/cross"
+            android:layout_marginRight="20dp"/>
 
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Score X : - 0"
-            android:textSize="30sp"
+            android:text=": 0"
+            android:textSize="40sp"
             android:textColor="@color/cross"
             android:textStyle="bold"
             android:id="@+id/scoreX"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
             >
         </TextView>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/circle"
+            android:layout_marginLeft="20dp"/>
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Score O : - 0"
-            android:textSize="30sp"
+            android:text=": 0"
+            android:textSize="40sp"
             android:textColor="@color/circle"
             android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
             android:id="@+id/scoreY"
+            android:layout_marginLeft="20dp"
             >
         </TextView>
     </LinearLayout>
+
+
 
     <RelativeLayout
         android:layout_width="90dp"
@@ -289,13 +312,13 @@
 
     <Button
         android:layout_width="320dp"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/button8"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:text="CLEAR"
+        android:text="SKORU SIFIRLA"
         android:id="@+id/clearButton"
-        android:textSize="15sp"
+        android:textSize="22sp"
         android:textColor="@color/cross"
         android:backgroundTint="@color/button"/>
 
