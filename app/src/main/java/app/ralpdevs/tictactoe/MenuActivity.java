@@ -3,7 +3,9 @@ package app.ralpdevs.tictactoe;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -52,7 +54,7 @@ public class MenuActivity extends AppCompatActivity {
 
     private void interstitialAd(){
         AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest, new InterstitialAdLoadCallback() {
+        InterstitialAd.load(this, "ca-app-pub-4737440729912440/8798203605", adRequest, new InterstitialAdLoadCallback() {
             @Override
             public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
                 interstitial = interstitialAd;
@@ -69,6 +71,29 @@ public class MenuActivity extends AppCompatActivity {
         ratingApp = findViewById(R.id.rating_app);
         soloPlay = findViewById(R.id.solo_play_button);
         multiPlay = findViewById(R.id.multi_play_button);
+
+        googlePlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String appPackageName = getPackageName();
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                }
+            }
+        });
+        ratingApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String appPackageName = getPackageName();
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                }
+            }
+        });
 
         multiPlay.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -33,6 +33,6 @@
             android:screenOrientation="portrait"></activity>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-4737440729912440~6351349728"/>
+            android:value="ca-app-pub-4737440729912440~2807510326"/>
     </application>
 </manifest>
