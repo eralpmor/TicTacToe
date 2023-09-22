@@ -26,14 +26,12 @@ import app.ralpdevs.tictactoe.R;
 public class MenuActivity extends AppCompatActivity {
 
     ImageView googlePlay, ratingApp, soloPlay, multiPlay;
-    private InterstitialAd interstitial;
     private AdView banner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        interstitialAd();
         multiPlayActivity();
         mobileAds();
 
@@ -52,20 +50,7 @@ public class MenuActivity extends AppCompatActivity {
         banner.loadAd(adRequest);
     }
 
-    private void interstitialAd(){
-        AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(this, "ca-app-pub-4737440729912440/8798203605", adRequest, new InterstitialAdLoadCallback() {
-            @Override
-            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                interstitial = interstitialAd;
-            }
-            @Override
-            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                interstitial = null;
-                Toast.makeText(MenuActivity.this,"Reklam gösterilemedi", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+
     private void multiPlayActivity(){
         googlePlay = findViewById(R.id.google_play);
         ratingApp = findViewById(R.id.rating_app);
@@ -98,25 +83,8 @@ public class MenuActivity extends AppCompatActivity {
         multiPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(interstitial != null){
-                    interstitial.show(MenuActivity.this);
-                    interstitial.setFullScreenContentCallback(new FullScreenContentCallback() {
-                        @Override
-                        public void onAdDismissedFullScreenContent() {
-                            super.onAdDismissedFullScreenContent();
-                            startActivity(new Intent(MenuActivity.this,MainActivity.class));
-
-                        }
-                    });
-
-
-                } else {
                     startActivity(new Intent(MenuActivity.this,MainActivity.class));
                     finish();
-                }
-
-
-
             }
         });
     }
