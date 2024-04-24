@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="app.ralpdevs.tictactoe.SoloActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/score_linear_solo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/cross"
+            android:layout_marginRight="20dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=": 0"
+            android:textSize="40sp"
+            android:textColor="@color/cross"
+            android:textStyle="bold"
+            android:id="@+id/scoreX_solo"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            >
+        </TextView>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/circle"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=": 0"
+            android:textSize="40sp"
+            android:textColor="@color/circle"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/scoreY_solo"
+            android:layout_marginLeft="20dp"
+            >
+        </TextView>
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/button1_solo"
+        android:layout_toLeftOf="@id/button5"
+        android:layout_marginRight="3dp"
+        android:layout_above="@id/button5"
+        android:background="@color/black"
+        android:layout_marginBottom="22dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:background="@color/background"
+            android:id="@+id/buttonImage1_solo">
+
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/button2_solo"
+        android:layout_above="@id/button5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/black"
+        android:layout_marginBottom="22dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:background="@color/background"
+            android:id="@+id/buttonImage2_solo">
+
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/button3_solo"
+        android:layout_toRightOf="@id/button2_solo"
+        android:layout_above="@id/button5_solo"
+        android:layout_marginLeft="3dp"
+        android:background="@color/black"
+        android:layout_marginBottom="22dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:background="@color/background"
+            android:id="@+id/buttonImage3_solo">
+
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/button4_solo"
+        android:layout_toLeftOf="@id/button5_solo"
+        android:layout_marginRight="3dp"
+        android:background="@color/black"
+        android:layout_marginTop="22dp">
+
+        <ImageView
+            android:id="@+id/buttonImage4_solo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:background="@color/background">
+
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/button5_solo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/buttonImage5_solo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:background="@color/background">
+
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/button6_solo"
+        android:layout_toRightOf="@id/button5_solo"
+        android:layout_marginLeft="3dp"
+        android:background="@color/black"
+        android:layout_marginTop="22dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:background="@color/background"
+            android:id="@+id/buttonImage6_solo">
+
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/button7_solo"
+        android:layout_toLeftOf="@id/button8_solo"
+        android:layout_below="@id/button5_solo"
+        android:layout_marginRight="3dp"
+        android:background="@color/black"
+        android:layout_marginTop="22dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:background="@color/background"
+            android:id="@+id/buttonImage7_solo">
+
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/button8_solo"
+        android:layout_below="@id/button5_solo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/black"
+        android:layout_marginTop="22dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:background="@color/background"
+            android:id="@+id/buttonImage8_solo">
+
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/button9_solo"
+        android:layout_toRightOf="@id/button8_solo"
+        android:layout_marginLeft="3dp"
+        android:layout_below="@id/button5_solo"
+        android:background="@color/black"
+        android:layout_marginTop="22dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            android:background="@color/background"
+            android:id="@+id/buttonImage9_solo">
+
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="8dp"
+        android:background="@color/blank"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/button5_solo"
+        android:layout_marginBottom="8dp">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="8dp"
+        android:background="@color/blank"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button5_solo"
+        android:layout_marginTop="8dp">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="8dp"
+        android:layout_height="330dp"
+        android:background="@color/blank"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/button5_solo"
+        android:layout_marginRight="-12dp">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="8dp"
+        android:layout_height="330dp"
+        android:background="@color/blank"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/button5_solo"
+        android:layout_marginLeft="-12dp">
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/button8_solo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="SKORU SIFIRLA"
+        android:id="@+id/clearButton_solo"
+        android:textSize="22sp"
+        android:textColor="@color/cross"
+        android:backgroundTint="@color/button"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView_solo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4737440729912440/7322016191">
+
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>

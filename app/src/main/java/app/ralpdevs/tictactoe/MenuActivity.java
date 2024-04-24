@@ -87,5 +87,13 @@ public class MenuActivity extends AppCompatActivity {
                     finish();
             }
         });
+
+        soloPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuActivity.this,SoloActivity.class));
+                finish();
+            }
+        });
     }
 }
