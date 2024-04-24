@@ -93,22 +93,11 @@ public class SoloActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (buttonClickable[0]) {
-
-                    if (startGame.equals("X")) {
-                        button1.setImageResource(R.drawable.cross);
-                        mor1 = 1;
-                        i++;
-                    } else {
-                        button1.setImageResource(R.drawable.circle);
-                        mor1 = 0;
-                        i++;
-                    }
-                    choosePlayer();
-                    winningGame();
-
+                    button1.setImageResource(R.drawable.cross);
+                    gameBoard[0] = "X";
                     buttonClickable[0] = false;
 
-
+                    computerMove();
                 }
             }
         });
@@ -117,21 +106,11 @@ public class SoloActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (buttonClickable[1]) {
-                    if (startGame.equals("X")) {
-                        button2.setImageResource(R.drawable.cross);
-                        mor2 = 1;
-                        i++;
-                    } else {
-                        button2.setImageResource(R.drawable.circle);
-                        mor2 = 0;
-                        i++;
-                    }
-                    choosePlayer();
-                    winningGame();
-
+                    button1.setImageResource(R.drawable.cross);
+                    gameBoard[1] = "X";
                     buttonClickable[1] = false;
 
-
+                    computerMove();
                 }
             }
         });
@@ -140,20 +119,11 @@ public class SoloActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (buttonClickable[2]) {
-                    if (startGame.equals("X")) {
-                        button3.setImageResource(R.drawable.cross);
-                        mor3 = 1;
-                        i++;
-                    } else {
-                        button3.setImageResource(R.drawable.circle);
-                        mor3 = 0;
-                        i++;
-                    }
-                    choosePlayer();
-                    winningGame();
-
+                    button1.setImageResource(R.drawable.cross);
+                    gameBoard[2] = "X";
                     buttonClickable[2] = false;
 
+                    computerMove();
                 }
             }
         });
@@ -162,20 +132,11 @@ public class SoloActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (buttonClickable[3]) {
-                    if (startGame.equals("X")) {
-                        button4.setImageResource(R.drawable.cross);
-                        mor4 = 1;
-                        i++;
-                    } else {
-                        button4.setImageResource(R.drawable.circle);
-                        mor4 = 0;
-                        i++;
-                    }
-                    choosePlayer();
-                    winningGame();
-
+                    button1.setImageResource(R.drawable.cross);
+                    gameBoard[3] = "X";
                     buttonClickable[3] = false;
 
+                    computerMove();
                 }
             }
         });
@@ -184,20 +145,11 @@ public class SoloActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (buttonClickable[4]) {
-                    if (startGame.equals("X")) {
-                        button5.setImageResource(R.drawable.cross);
-                        mor5 = 1;
-                        i++;
-                    } else {
-                        button5.setImageResource(R.drawable.circle);
-                        mor5 = 0;
-                        i++;
-                    }
-                    choosePlayer();
-                    winningGame();
-
+                    button1.setImageResource(R.drawable.cross);
+                    gameBoard[4] = "X";
                     buttonClickable[4] = false;
 
+                    computerMove();
                 }
             }
         });
@@ -206,20 +158,11 @@ public class SoloActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (buttonClickable[5]) {
-                    if (startGame.equals("X")) {
-                        button6.setImageResource(R.drawable.cross);
-                        mor6 = 1;
-                        i++;
-                    } else {
-                        button6.setImageResource(R.drawable.circle);
-                        mor6 = 0;
-                        i++;
-                    }
-                    choosePlayer();
-                    winningGame();
-
+                    button1.setImageResource(R.drawable.cross);
+                    gameBoard[5] = "X";
                     buttonClickable[5] = false;
 
+                    computerMove();
                 }
             }
         });
@@ -228,20 +171,11 @@ public class SoloActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (buttonClickable[6]) {
-                    if (startGame.equals("X")) {
-                        button7.setImageResource(R.drawable.cross);
-                        mor7 = 1;
-                        i++;
-                    } else {
-                        button7.setImageResource(R.drawable.circle);
-                        mor7 = 0;
-                        i++;
-                    }
-                    choosePlayer();
-                    winningGame();
-
+                    button1.setImageResource(R.drawable.cross);
+                    gameBoard[6] = "X";
                     buttonClickable[6] = false;
 
+                    computerMove();
                 }
             }
         });
@@ -250,20 +184,11 @@ public class SoloActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (buttonClickable[7]) {
-                    if (startGame.equals("X")) {
-                        button8.setImageResource(R.drawable.cross);
-                        mor8 = 1;
-                        i++;
-                    } else {
-                        button8.setImageResource(R.drawable.circle);
-                        mor8 = 0;
-                        i++;
-                    }
-                    choosePlayer();
-                    winningGame();
-
+                    button1.setImageResource(R.drawable.cross);
+                    gameBoard[7] = "X";
                     buttonClickable[7] = false;
 
+                    computerMove();
                 }
             }
         });
@@ -272,25 +197,78 @@ public class SoloActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (buttonClickable[8]) {
-                    if (startGame.equals("X")) {
-                        button9.setImageResource(R.drawable.cross);
-                        mor9 = 1;
-                        i++;
-                    } else {
-                        button9.setImageResource(R.drawable.circle);
-                        mor9 = 0;
-                        i++;
-                    }
-                    choosePlayer();
-                    winningGame();
-
+                    button1.setImageResource(R.drawable.cross);
+                    gameBoard[8] = "X";
                     buttonClickable[8] = false;
 
+                    computerMove();
                 }
             }
         });
 
 
+
+
+    }
+
+    private void computerMove() {
+        // Basit bir yapay zeka algoritması kullanarak, boş bir yere "O" koymayı seçin
+        Random random = new Random();
+        int randomIndex;
+        do {
+            randomIndex = random.nextInt(9);
+        } while (!buttonClickable[randomIndex]); // Boş olan bir yeri seçene kadar tekrarlayın
+        // Boş yere "O" koyun
+        switch (randomIndex) {
+            case 0:
+                button1.setImageResource(R.drawable.circle);
+                gameBoard[0] = "O";
+                buttonClickable[0] = false;
+                break;
+            case 1:
+                button2.setImageResource(R.drawable.circle);
+                gameBoard[1] = "O";
+                buttonClickable[1] = false;
+                break;
+            case 2:
+                button3.setImageResource(R.drawable.circle);
+                gameBoard[2] = "O";
+                buttonClickable[2] = false;
+                break;
+            case 3:
+                button4.setImageResource(R.drawable.circle);
+                gameBoard[3] = "O";
+                buttonClickable[3] = false;
+                break;
+            case 4:
+                button5.setImageResource(R.drawable.circle);
+                gameBoard[4] = "O";
+                buttonClickable[4] = false;
+                break;
+            case 5:
+                button6.setImageResource(R.drawable.circle);
+                gameBoard[5] = "O";
+                buttonClickable[5] = false;
+                break;
+            case 6:
+                button7.setImageResource(R.drawable.circle);
+                gameBoard[6] = "O";
+                buttonClickable[6] = false;
+                break;
+            case 7:
+                button8.setImageResource(R.drawable.circle);
+                gameBoard[7] = "O";
+                buttonClickable[7] = false;
+                break;
+            case 8:
+                button9.setImageResource(R.drawable.circle);
+                gameBoard[8] = "O";
+                buttonClickable[8] = false;
+                break;
+
+        }
+        choosePlayer();
+        winningGame();
     }
 
     private void choosePlayer() {
